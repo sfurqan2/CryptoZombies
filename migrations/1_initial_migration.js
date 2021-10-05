@@ -1,5 +1,5 @@
-const CryptoZombies = artifacts.require("./CryptoZombies.sol");
+const ZombieOwnership = artifacts.require("ZombieOwnership");
 
 module.exports = function (deployer) {
-  deployer.deploy(CryptoZombies);
+  deployer.deploy(ZombieOwnership);
 };

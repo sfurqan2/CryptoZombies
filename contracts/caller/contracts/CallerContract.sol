@@ -1,7 +1,9 @@
-pragma solidity 0.5.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
 
 import "./EthPriceOracleInterface.sol";
-import "../../../node_modules/openzeppelin-solidity/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 contract CallerContract is Ownable {
   uint256 private ethPrice;
   EthPriceOracleInterface private oracleInstance;
