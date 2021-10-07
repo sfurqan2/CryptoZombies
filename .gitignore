@@ -1,4 +1,4 @@
 node_modules
 build
-private_key
-public_key
+mainnet_private_key
+mainnet_public_key
