@@ -9,6 +9,13 @@ const mnemonic =
 module.exports = {
   // Object with configuration for each network
   networks: {
+    development: {
+        host: "127.0.0.1",
+        port: 7545,
+        network_id: "*",
+        gas: 6500000
+    },
+
     // Configuration for mainnet
     mainnet: {
       provider: function () {

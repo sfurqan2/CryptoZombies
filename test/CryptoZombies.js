@@ -1,6 +1,6 @@
 const CryptoZombies = artifacts.require("ZombieOwnership");
 const utils = require("./helpers/utils");
-const time = require("./helpers/time");
+const { time } = require('@openzeppelin/test-helpers');
 
 // Meaning full testing instead of assertions
 var expect = require("chai").expect;
@@ -75,6 +75,7 @@ contract("CryptoZombies", (accounts) => {
       expect(newOwner).to.equal(bob);
     });
   });
+
   it("zombies should be able to attack another zombie", async () => {
     let result;
     result = await contractInstance.createRandomZombie(zombieNames[0], {

@@ -4,9 +4,11 @@ pragma solidity ^0.8.9;
 import "./zombieattack.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-abstract contract ZombieOwnership is ZombieAttack, ERC721 {
+contract ZombieOwnership is ZombieAttack, ERC721 {
 
   mapping (uint => address) zombieApprovals;
+
+  constructor() ERC721("Zombie", "ZMB"){}
 
   function balanceOf(address _owner) override public view returns (uint256) {
     return ownerZombieCount[_owner];
